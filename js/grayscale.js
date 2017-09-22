@@ -1,5 +1,8 @@
 (function($) {
   "use strict"; // Start of use strict
+  
+  $("#slideshow").removeAttr("hidden");
+  $("#slideshow2").removeAttr("hidden");
 
   $("#slideshow > div:gt(0)").hide();
   
@@ -10,6 +13,17 @@
       .fadeIn(1000)
       .end()
       .appendTo('#slideshow');
+  },  3000);
+
+  $("#slideshow2 > div:gt(0)").hide();
+  
+  setInterval(function() { 
+    $('#slideshow2 > div:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('#slideshow2');
   },  3000);
 
   // Smooth scrolling using jQuery easing
@@ -54,7 +68,7 @@ var map = null;
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
 google.maps.event.addDomListener(window, 'resize', function() {
-  map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
+  map.setCenter(new google.maps.LatLng(43.973314, -79.238257));
 });
 
 function init() {
@@ -65,7 +79,7 @@ function init() {
     zoom: 15,
 
     // The latitude and longitude to center the map (always required)
-    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+    center: new google.maps.LatLng(43.973314, -79.238257), // New York
 
     // Disables the default Google Maps UI components
     disableDefaultUI: true,
@@ -193,7 +207,7 @@ function init() {
 
   // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
   var image = 'img/map-marker.svg';
-  var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
+  var myLatLng = new google.maps.LatLng(43.973314, -79.238257);
   var beachMarker = new google.maps.Marker({
     position: myLatLng,
     map: map,
