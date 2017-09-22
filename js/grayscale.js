@@ -1,6 +1,17 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  $("#slideshow > div:gt(0)").hide();
+  
+  setInterval(function() { 
+    $('#slideshow > div:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('#slideshow');
+  },  3000);
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -34,6 +45,7 @@
       $("#mainNav").removeClass("navbar-shrink");
     }
   });
+
 
 })(jQuery); // End of use strict
 
