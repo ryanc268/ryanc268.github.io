@@ -153,21 +153,19 @@ a {
   -o-background-size: cover;
   background-size: cover; }
 
-#slideshow { 
+#slideshow {
     margin: auto; 
     position: relative; 
-    width: 200px; 
-    height: 240px; 
-    padding: 10px; 
+    width: 240px; 
+    height: 200px; 
     box-shadow: 0 0 20px rgba(0,0,0,0.4); 
 }
 
 #slideshow2 { 
-  margin-right: 130px; 
+  margin: auto; 
   position: relative; 
-  width: 200px; 
-  height: 240px; 
-  padding-right: 10px;
+  width: 225px; 
+  height: 360px; 
   box-shadow: 0 0 20px rgba(0,0,0,0.4); 
 }
 
