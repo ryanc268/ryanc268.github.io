@@ -156,8 +156,8 @@ a {
 #slideshow {
     margin: auto; 
     position: relative; 
-    width: 230px; 
-    height: 374px; 
+    width: 200px; 
+    height: 240px; 
     box-shadow: 0 0 20px rgba(0,0,0,0.4); 
 }
 
